@@ -33,11 +33,13 @@ header {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: flex; /* Add flex display */
+    justify-content: space-between; /* Add justify-content property */
   }
   
-  nav li {
-    float: left;
-  }
+  /* nav li { */
+    /* float: left; */
+  /* } */
   
   nav li a {
     display: block;
