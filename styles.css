@@ -5,6 +5,56 @@ body {
 
 }
 
+.text-left {
+    text-align: left;
+}
+
+.button.block {
+    display: block;
+    width: 200px;    
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
 .st3 {
     fill: #C1272D;
 }
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    background-color: #111;
+  }
+  
+ /* main { */
+    /* Add styles for main content here */
+  /* } */
+  
+  /* footer { */
+    /* Add styles for footer content here */
+  /* } */
