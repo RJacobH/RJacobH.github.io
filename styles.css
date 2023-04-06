@@ -28,31 +28,47 @@ header {
     padding: 10px;
   }
   
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex; /* Add flex display */
-    justify-content: space-between; /* Add justify-content property */
-  }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex; /* Add flex display */
+  justify-content: space-between; /* Add justify-content property */
+}
+
+/* nav li { */
+  /* float: left; */
+/* } */
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
   
-  /* nav li { */
-    /* float: left; */
-  /* } */
-  
-  nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  nav li a:hover {
-    background-color: #111;
-  }
-  
+#firstCode {
+  background-color: rgb(34, 255, 0);
+  /* top: 100px; */
+}
+
+#secondCode {
+  background-color: blue;
+  top: 400px;
+}
+
+canvas {
+  position: absolute;
+  top: 300px;
+  /* left: 50px; */
+}
+
  /* main { */
     /* Add styles for main content here */
   /* } */
