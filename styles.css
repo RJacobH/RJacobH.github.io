@@ -2,7 +2,14 @@ body {
     margin: 0;
     background: pink;
     text-align: center;
+    height: 100vh;
+    overflow: hidden;
 
+}
+
+html {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .text-left {
