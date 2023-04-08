@@ -18,6 +18,7 @@ let cincrement = 0.07;
 function setup() {
   createCanvas(1000, 750, WEBGL);
   //ortho();
+  
 }
 
 function draw() {
