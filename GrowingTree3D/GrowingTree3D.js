@@ -78,7 +78,10 @@ function calc(v) {
 }
 
 function leaf() {
-  fill(calc(a),calc(b),calc(c));
+  fill(0);
+  if (Math.random() > 0.995) {
+    fill(255);
+  }
   box(5);
 
 }
