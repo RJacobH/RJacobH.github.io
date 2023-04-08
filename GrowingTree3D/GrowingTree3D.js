@@ -1,6 +1,8 @@
 let branches = 3;
 let decrease = 0.66;
 let minimum_size = 20;
+let max_leaves = 500;
+let current_leaves = 0;
 
 let theta;
 let y_rot = 0.0;
@@ -78,10 +80,14 @@ function calc(v) {
 }
 
 function leaf() {
-  fill(0);
-  if (Math.random() > 0.995) {
-    fill(255);
+  if (current_leaves < max_leaves) {
+    fill(0);
+    if (Math.random() > 0.995) {
+      fill(255);
+    }
+    box(5);
+    current_leaves++;
   }
-  box(5);
+
 
 }
