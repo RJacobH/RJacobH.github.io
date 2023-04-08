@@ -1,8 +1,10 @@
 let branches = 3;
 let decrease = 0.66;
 let minimum_size = 20;
-let max_leaves = 500;
-let current_leaves = 0;
+// let max_leaves = 500;
+// let current_leaves = 0;
+let max_depth = 7;
+// let current_depth = 0;
 
 let theta;
 let y_rot = 0.0;
@@ -53,41 +55,39 @@ function draw() {
   
   line(0, 0, 0, 0, -L, 0);
   translate(0, -L, 0);
-  branch(L);
+  branch(L, 1, 128, 128, 128);
+  current_leaves = 0;
 }
 
 
-function branch(h) {
+function branch(h, depth, col1, col2, col3) {
   h *= decrease;
   
-  if (h > minimum_size){
+  if (h > minimum_size && depth < max_depth){
     for (let i = 0; i < branches; i++) {
       push();
       rotate(theta);
       line(0, 0, 0, 0, -h, 0);
       translate(0, -h, 0);
-      branch(h);
+      branch(h, depth+1, (col1 + i*90)%255, (col2 + i*70) % 255, (col3 + i*50)%255);
       pop();
       rotateY(2*PI/branches);
     }
   } else {
-    leaf();
+    leaf(col1, col2, col3);
   }
+  
 }
 
 function calc(v) {
   return noise((sin((v+1)*PI)+1)/2)*255;
 }
 
-function leaf() {
-  if (current_leaves < max_leaves) {
-    fill(0);
-    if (Math.random() > 0.995) {
-      fill(255);
-    }
-    box(5);
-    current_leaves++;
-  }
-
-
+function leaf(col1, col2, col3) {
+  // fill(0);
+  // if (Math.random() > 0.995) {
+  // fill(Math.random() * 255, Math.random() * 255, Math.random() * 255);
+  fill(col1, col2, col3);
+  // }
+  box(5);
 }
